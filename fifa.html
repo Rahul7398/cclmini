@@ -10,13 +10,13 @@
                 <th>Rank</th>
                 <th>Name</th>
               </tr>
-              {% for i in posts %}
+              {% for i in range(len(posts)) %}
                 {% if i%2 ==0 %}
               <tr>
               <td>
-                  {{ i["Rank"] }}
+                  {{ posts[i]['Rank'] }}
            </td>
-            <td> {{ i["Name"] }}</td></tr>
+            <td> {{ posts[i]["Name"] }}</td></tr>
                 {% endif %}
             {% endfor %}
           </table>
