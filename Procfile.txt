@@ -1,1 +1,1 @@
-web: gunicorn app:CCL
+web: gunicorn CCL:app
