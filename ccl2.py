@@ -104,7 +104,7 @@ def scrapecicct20i():
 
 @app.route('/')
 def default():
-	return "qwerty"
+	return render_template('CCLhome.html')
 
 if __name__ == "__main__":
     
