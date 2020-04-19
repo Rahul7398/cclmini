@@ -32,7 +32,9 @@ html = BeautifulSoup(data.text, 'html.parser')
 x = html.find_all(class_='fi-t__nText')    
 for i in x:
     title = i.text
-    colfm.insert_one({'Rank':c,'Name':title})    
+    colfm.insert_one({'Rank':c,'Name':title}) 
+    if(c==30):
+	break
     c += 1
 c = 1
 url = 'https://www.fifa.com/fifa-world-ranking/ranking-table/women/'
@@ -41,7 +43,10 @@ html = BeautifulSoup(data.text, 'html.parser')
 x = html.find_all(class_='fi-t__nText')    
 for i in x:
     title = i.text
-    colfw.insert_one({'Rank':c,'Name':title})    
+    colfw.insert_one({'Rank':c,'Name':title})
+    if(c==30):
+        break
+	
     c += 1
 c = 1
 url = 'https://www.icc-cricket.com/rankings/mens/team-rankings/odi'
