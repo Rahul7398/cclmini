@@ -1,0 +1,22 @@
+{% extends "CCLmini.html" %}
+{% block content %}
+    <title>Fifa Ranking</title>
+  <br>
+  <br>
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+              </tr>
+              {% for i in posts %}
+              <tr>
+              <td>
+                  {{ i["Rank"] }}
+           </td>
+            <td> {{ i["Name"] }}</td></tr>
+            {% endfor %}
+          </table>
+    </div>
+    {% endblock %}
