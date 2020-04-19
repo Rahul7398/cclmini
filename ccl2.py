@@ -3,7 +3,7 @@ import requests
 from pymongo import MongoClient
 from flask import Flask, escape, request,render_template,flash, redirect,url_for,session,logging
 import os
-from pymongo import Connection
+#from pymongo import Connection
 
 
 app = Flask(__name__)
