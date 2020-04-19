@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from pymongo import MongoClient
 from flask import Flask, escape, request,render_template,flash, redirect,url_for,session,logging
-'''
+
 app = Flask(__name__)
 client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
 db = client.Miniproject
@@ -18,7 +18,6 @@ coliodi.delete_many({})
 colitest.delete_many({})
 colit20i.delete_many({})
 #--------------------------
-'''
 c = 1
 url = 'https://www.fifa.com/fifa-world-ranking/ranking-table/men/'
 
