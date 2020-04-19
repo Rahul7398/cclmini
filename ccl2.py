@@ -2,10 +2,15 @@ from bs4 import BeautifulSoup
 import requests
 from pymongo import MongoClient
 from flask import Flask, escape, request,render_template,flash, redirect,url_for,session,logging
+import os
+from pymongo import Connection
+
 
 app = Flask(__name__)
-client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
-db = client.Miniproject
+#client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
+url = os.getenv('MONGOLAB_URI',"mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
+db = connection(url)['Miniproject']
+#db = client.Miniproject
 colfm = db.fifamen
 colfw = db.fifawomen
 coliodi = db.iccodi
