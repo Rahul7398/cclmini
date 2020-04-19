@@ -10,8 +10,7 @@ app = Flask(__name__)
 
 client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
 
-db = client.Miniproject
-
+db = client.ccldatabase
 
 colfm = db.fifamen
 colfw = db.fifawomen
