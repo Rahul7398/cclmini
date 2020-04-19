@@ -92,11 +92,11 @@ def scrapefm():
 def scrapefw():
     cursor = colfw.find()
     l=[]
-    x = 0
+    x = None
     for i in cursor:
-        if x%2 ==0:
+        if i !=x:
             l.append(i)
-        x +=1
+        x =i
     return render_template('fifa.html',posts=l)
 
 @app.route('/iccodi')
