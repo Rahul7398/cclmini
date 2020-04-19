@@ -14,7 +14,7 @@ db = client.Miniproject
 """
 db = client.get_default_database()
 print(db.collection_names())
-
+db = db['Miniproject']
 colfm = db.fifamen
 colfw = db.fifawomen
 coliodi = db.iccodi
