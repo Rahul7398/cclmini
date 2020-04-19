@@ -7,9 +7,14 @@ from pymongo import Connection
 
 
 app = Flask(__name__)
-client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
 
+client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
+"""
 db = client.Miniproject
+"""
+db = client.get_default_database()
+print db.collection_names()
+
 colfm = db.fifamen
 colfw = db.fifawomen
 coliodi = db.iccodi
