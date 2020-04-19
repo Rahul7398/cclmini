@@ -7,10 +7,9 @@ from pymongo import Connection
 
 
 app = Flask(__name__)
-#client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
-url = os.getenv('MONGOLAB_URI',"mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
-db = connection(url)['Miniproject']
-#db = client.Miniproject
+client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
+
+db = client.Miniproject
 colfm = db.fifamen
 colfw = db.fifawomen
 coliodi = db.iccodi
