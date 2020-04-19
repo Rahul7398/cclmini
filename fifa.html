@@ -11,11 +11,13 @@
                 <th>Name</th>
               </tr>
               {% for i in posts %}
+                {% if i%2 ==0 %}
               <tr>
               <td>
                   {{ i["Rank"] }}
            </td>
             <td> {{ i["Name"] }}</td></tr>
+                {% endif %}
             {% endfor %}
           </table>
     </div>
