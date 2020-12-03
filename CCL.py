@@ -4,7 +4,7 @@ from pymongo import MongoClient
 from flask import Flask, escape, request,render_template,flash, redirect,url_for,session,logging
 
 app = Flask(__name__)
-client = MongoClient("mongodb+srv://Rahul:Rahul@cluster0-lfcqx.mongodb.net/test?retryWrites=true&w=majority")
+client = MongoClient("MONGO URI")
 db = client.Miniproject
 colfm = db.fifamen
 colfw = db.fifawomen
